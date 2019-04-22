@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Main5Activity">
+
+    <TextView
+            android:text="Rock-Tivity"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:id="@+id/txtRockHead4" android:textSize="30sp" android:textColor="@android:color/darker_gray"
+            android:gravity="center" tools:background="@color/colorPrimaryDark"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="30dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/txtByCity" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp" android:layout_marginEnd="12dp" android:layout_marginRight="12dp"/>
+    <TextView
+            android:text="Events by City"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/txtByCity" android:textSize="24sp" android:textColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@+id/txtRockHead4" android:layout_marginBottom="25dp"
+            app:layout_constraintBottom_toTopOf="@+id/txtCityView"/>
+    <TextView
+            android:layout_width="378dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/txtCityView" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtByCity" android:layout_marginBottom="15dp"/>
+</android.support.constraint.ConstraintLayout>

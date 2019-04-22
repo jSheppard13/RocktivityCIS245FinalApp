@@ -1,6 +1,7 @@
 package edu.student.rock_tivityfinal
 
 import android.content.Context
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -18,7 +19,8 @@ class Main2Activity : AppCompatActivity() {
         //binding objects
         val spin = findViewById<Spinner>(R.id.spinCity)
         val btnSub = findViewById<Button>(R.id.btnSubmit)
-        var citySelected = 0
+        val btnViewAll = findViewById<Button>(R.id.btnViewAll)
+        var citySelected = 8
         val list = arrayOf ("Beloit", "Belvidere", "Byron", "Cherry Valley", "Freeport", "Loves Park", "Machesney Park", "Pecatonica", "Rockford", "Rockton")
         val adapter1 = ArrayAdapter <String> (this, android.R.layout.simple_spinner_item, list)
         android.R.layout.simple_spinner_item
@@ -39,9 +41,14 @@ class Main2Activity : AppCompatActivity() {
             }
             hideKeyboard()
 
-            /*val intentCity = Intent(this, Main4Activity::class.java)
+            btnViewAll.setOnClickListener(View.OnClickListener {
+                val intentViewAll = Intent(this, Main3Activity::class.java)
+                startActivity(intentViewAll)
+            })
+
+            val intentCity = Intent(this, Main5Activity::class.java)
             intentCity.putExtra("SendStuff",citySelected)
-            startActivity(intentCity)*/
+            startActivity(intentCity)
         }
 
 

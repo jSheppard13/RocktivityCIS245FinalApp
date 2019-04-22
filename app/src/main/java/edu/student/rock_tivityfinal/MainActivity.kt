@@ -31,10 +31,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(intentView)
         })
 
-        /* btnList.setOnClickListener(View.OnClickListener {
-             val intentList = Intent(this, Main6Activity::class.java)
+        btnList.setOnClickListener(View.OnClickListener {
+             val intentList = Intent(this, Main4Activity::class.java)
              startActivity(intentList)
-         })*/
+         })
     }
 }
-
