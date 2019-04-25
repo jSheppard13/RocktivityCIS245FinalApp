@@ -1,5 +1,49 @@
 {
   "project_info": {
+    "project_number": "781586427000",
+    "firebase_url": "https://rocktivityfinal-e0bca.firebaseio.com",
+    "project_id": "rocktivityfinal-e0bca",
+    "storage_bucket": "rocktivityfinal-e0bca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:781586427000:android:b9f40d1cc6f1ac86",
+        "android_client_info": {
+          "package_name": "edu.student.rock_tivityfinal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "781586427000-rnm8qkm9of4r1befjblgos8g0vrd6763.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFME4rpKmwrM9FasFKJNhS0xH9Ki64cBI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "781586427000-rnm8qkm9of4r1befjblgos8g0vrd6763.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
+
+
+
+
+/*{
+  "project_info": {
     "project_number": "757179955059",
     "firebase_url": "https://rocktivityfinal.firebaseio.com",
     "project_id": "rocktivityfinal",
@@ -46,3 +90,4 @@
   ],
   "configuration_version": "1"
 }
+*/

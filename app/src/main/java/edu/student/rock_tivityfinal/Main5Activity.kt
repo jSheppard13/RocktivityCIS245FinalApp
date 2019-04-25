@@ -16,7 +16,7 @@ class Main5Activity : AppCompatActivity() {
         setContentView(R.layout.activity_main5)
 
         val txtCityView = findViewById<TextView>(R.id.txtCityView)
-        var eventsByCity = findViewById<TextView>(R.id.AllEvents)
+        var eventsByCity = findViewById<TextView>(R.id.txtAllEventsLabel)
         var ref = FirebaseDatabase.getInstance().getReference("Events")
         var citySelected: String = intent.getStringExtra("SendStuff")
 

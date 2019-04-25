@@ -41,15 +41,15 @@ class Main2Activity : AppCompatActivity() {
             }
             hideKeyboard()
 
-            btnViewAll.setOnClickListener(View.OnClickListener {
-                val intentViewAll = Intent(this, Main3Activity::class.java)
-                startActivity(intentViewAll)
-            })
-
             val intentCity = Intent(this, Main5Activity::class.java)
             intentCity.putExtra("SendStuff",citySelected)
             startActivity(intentCity)
         }
+        btnViewAll.setOnClickListener(View.OnClickListener {
+            val intentViewAll = Intent(this, Main3Activity::class.java)
+            startActivity(intentViewAll)
+        })
+
 
 
         //Fire hidekeyboard when user taps outside any text object

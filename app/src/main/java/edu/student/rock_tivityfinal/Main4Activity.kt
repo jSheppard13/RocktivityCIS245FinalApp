@@ -7,12 +7,19 @@ import android.os.Bundle
 import android.util.Log
 import android.view.inputmethod.InputMethodManager
 import android.widget.*
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.ValueEventListener
-import kotlinx.android.synthetic.main.activity_main4.*
 import edu.student.rock_tivityfinal.R
+import kotlinx.android.synthetic.main.activity_main4.*
+import com.google.firebase.database.DatabaseReference
+
+
 
 class Main4Activity : AppCompatActivity() {
 
@@ -26,12 +33,24 @@ class Main4Activity : AppCompatActivity() {
         var location = findViewById<EditText>(R.id.txtLocation)
         var date = findViewById<EditText>(R.id.txtDate)
         var btnSubmitEvent = findViewById<Button>(R.id.btnSubmitEvent)
-        var events = findViewById<TextView>(R.id.AllEvents)
+        var database = FirebaseDatabase.getInstance()
         var ref = FirebaseDatabase.getInstance().getReference("EventsFile")
 
-        var citySelected = 8
-        val list = arrayOf ("Beloit", "Belvidere", "Byron", "Cherry Valley", "Freeport", "Loves Park", "Machesney Park", "Pecatonica", "Rockford", "Rockton")
-        val adapter2 = ArrayAdapter <String> (this, android.R.layout.simple_spinner_item, list)
+
+        var citySelected = 0
+        val list = arrayOf(
+            "Beloit",
+            "Belvidere",
+            "Byron",
+            "Cherry Valley",
+            "Freeport",
+            "Loves Park",
+            "Machesney Park",
+            "Pecatonica",
+            "Rockford",
+            "Rockton"
+        )
+        val adapter2 = ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, list)
         android.R.layout.simple_spinner_item
         android.R.layout.simple_spinner_dropdown_item
         city.adapter = adapter2
@@ -48,62 +67,48 @@ class Main4Activity : AppCompatActivity() {
                 "Rockford" -> citySelected = 8
                 "Rockton" -> citySelected = 9
             }
-            hideKeyboard()
+            // hideKeyboard()
 
         }
 
-        btnSubmitEvent.setOnClickListener{
+        btnSubmitEvent.setOnClickListener {
+
 
             txtName.requestFocus()
 
-            var eventid: String = ref.push().key.toString()
+            val eventID: String = ref.push().key.toString()
 
-            var eventg = EventsFile(eventid, name.text.toString(), city.selectedItem.toString(), location.text.toString(), date.text.toString())
+            var eventg = EventsFile(
+                eventID,
+                name.text.toString(),
+                city.selectedItem.toString(),
+                location.text.toString(),
+                date.text.toString()
+            )
 
-                hideKeyboard()
-                name.setText("")
+            hideKeyboard()
+            name.setText("")
 
-                location.setText("")
-                date.setText("")
-                txtName.requestFocus()
-                ref.child(eventid).setValue(eventg).addOnCompleteListener{
-                    Toast.makeText(this, "Event Added!", Toast.LENGTH_SHORT).show()
-                }
-
-            val intentViewAll = Intent(this, Main3Activity::class.java)
-            startActivity(intentViewAll)
-
+            location.setText("")
+            date.setText("")
+            txtName.requestFocus()
+            ref.child(eventID).setValue(eventg).addOnCompleteListener {
+                Toast.makeText(this, "Event Added!", Toast.LENGTH_SHORT).show()
+            }
         }
 
-        ref.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                events.text = ""
-                val children = dataSnapshot.children
-                children.forEach {
-                    println("data: " + it.toString())
-                    if (events.text.toString() != "") {
-                        events.text = events.text.toString() + "\n" + "Event: " + it.child("name").value.toString() + " " + "City: " + it.child("Events").value.toString() + "Location: " + it.child("Events").value.toString() + "Date: " + it.child("Events").value.toString()
-                    }else{
-                        events.text = "My Events"
-                        events.text = events.text.toString() + "\n" + "Event: " + it.child("name").value.toString() + " " + "City: " + it.child("Events").value.toString() + "Location: " + it.child("Events").value.toString() + "Date: " + it.child("Events").value.toString()
-                    }
-                }
-            }
-            override fun onCancelled(error: DatabaseError) {
-                // Failed to read value
-                Log.w("Message", "Failed to read value.", error.toException())
-            }
-        })
     }
+
+
 
         fun hideKeyboard() {
-        try {
-            val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-            imm.hideSoftInputFromWindow(currentFocus!!.windowToken, 0)
-        } catch (e: Exception) {
-            println("An error has occurred.")
-        }
+            try {
+                val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                imm.hideSoftInputFromWindow(currentFocus!!.windowToken, 0)
+            } catch (e: Exception) {
+                println("An error has occurred.")
+            }
 
-    }
+        }
 
 }
