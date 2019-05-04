@@ -1,86 +1,42 @@
 {
   "project_info": {
-    "project_number": "781586427000",
-    "firebase_url": "https://rocktivityfinal-e0bca.firebaseio.com",
-    "project_id": "rocktivityfinal-e0bca",
-    "storage_bucket": "rocktivityfinal-e0bca.appspot.com"
+    "project_number": "827144238398",
+    "firebase_url": "https://rock-tivityv4.firebaseio.com",
+    "project_id": "rock-tivityv4",
+    "storage_bucket": "rock-tivityv4.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:781586427000:android:b9f40d1cc6f1ac86",
+        "mobilesdk_app_id": "1:827144238398:android:39bd7dfbb0177620",
         "android_client_info": {
-          "package_name": "edu.student.rock_tivityfinal"
+          "package_name": "edu.student.rock_tivityv4"
         }
       },
       "oauth_client": [
         {
-          "client_id": "781586427000-rnm8qkm9of4r1befjblgos8g0vrd6763.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAFME4rpKmwrM9FasFKJNhS0xH9Ki64cBI"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "781586427000-rnm8qkm9of4r1befjblgos8g0vrd6763.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    }
-  ],
-  "configuration_version": "1"
-}
-
-
-
-
-/*{
-  "project_info": {
-    "project_number": "757179955059",
-    "firebase_url": "https://rocktivityfinal.firebaseio.com",
-    "project_id": "rocktivityfinal",
-    "storage_bucket": "rocktivityfinal.appspot.com"
-  },
-  "client": [
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:757179955059:android:b9f40d1cc6f1ac86",
-        "android_client_info": {
-          "package_name": "edu.student.rock_tivityfinal"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "757179955059-gn2j7c6vjs73cq6vd2ecbrbhpap8kn7h.apps.googleusercontent.com",
+          "client_id": "827144238398-i7dq1em0kiejbrksllpuhqar2fiuurdo.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "edu.student.rock_tivityfinal",
+            "package_name": "edu.student.rock_tivityv4",
             "certificate_hash": "1cb32673871d373484679dc30524f0707464c2e2"
           }
         },
         {
-          "client_id": "757179955059-jb5o2ogdnmseuvnfo36qkgg057d8euk7.apps.googleusercontent.com",
+          "client_id": "827144238398-p38j02dlcg3ci4pci7hg8r7n9j2stkgq.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCKAoHut0GUvbe_3MwAnbNOXY7_Od-22P8"
+          "current_key": "AIzaSyCPUxh-Y_bAehhcIIsYtD19Q5AECXRboiw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "757179955059-jb5o2ogdnmseuvnfo36qkgg057d8euk7.apps.googleusercontent.com",
+              "client_id": "827144238398-p38j02dlcg3ci4pci7hg8r7n9j2stkgq.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -90,4 +46,3 @@
   ],
   "configuration_version": "1"
 }
-*/

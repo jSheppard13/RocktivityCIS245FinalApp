@@ -9,27 +9,31 @@
 
     <TextView
             android:text="Rock-Tivity"
-            android:layout_width="0dp"
-            android:layout_height="64dp"
+            android:layout_width="387dp"
+            android:layout_height="wrap_content"
             android:id="@+id/txtRockHead4" android:textSize="30sp" android:textColor="@android:color/darker_gray"
             android:gravity="center" tools:background="@color/colorPrimaryDark"
             android:layout_marginTop="16dp"
-            android:layout_marginBottom="30dp" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/txtByCity" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="12dp" android:layout_marginRight="12dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="12dp"
-            android:layout_marginStart="12dp" android:layout_marginEnd="12dp" android:layout_marginRight="12dp"/>
+            android:layout_marginStart="12dp" android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/txtByCity2"/>
     <TextView
             android:text="Events by City"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/txtByCity" android:textSize="24sp" android:textColor="@android:color/black"
-            app:layout_constraintTop_toBottomOf="@+id/txtRockHead4" android:layout_marginBottom="25dp"
-            app:layout_constraintBottom_toTopOf="@+id/txtCityView"/>
+            android:id="@+id/txtByCity2" android:textSize="24sp" android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginBottom="59dp"
+            app:layout_constraintBottom_toTopOf="@+id/txtCityView" android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtRockHead4"/>
     <TextView
             android:layout_width="378dp"
             android:layout_height="0dp"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/txtCityView" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtByCity" android:layout_marginBottom="15dp"/>
+            android:id="@+id/txtCityView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="49dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtByCity2" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="52dp"/>
 </android.support.constraint.ConstraintLayout>
