@@ -94,7 +94,7 @@ class Main4Activity : AppCompatActivity() {
             val formatter = SimpleDateFormat("MM/dd/yyyy")
             var formatted = formatter.format(today)
             var formatted2 = formatter.format(date)
-              if (formatted > date.toString()) {
+              if (formatted > formatted2) {
                Toast.makeText(this, "Date entered is in the past", Toast.LENGTH_SHORT).show()
                txtDate.selectAll()
                dataValid = false
